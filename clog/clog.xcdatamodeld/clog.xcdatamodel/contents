@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Questionnaire" representedClassName="Questionnaire" syncable="YES" codeGenerationType="class">
+        <attribute name="anxiety" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="down" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="interest" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="phoneBed" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sleep" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sleepQuality" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="worry" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+    </entity>
+    <elements>
+        <element name="Questionnaire" positionX="-63" positionY="-18" width="128" height="163"/>
+    </elements>
 </model>

@@ -7,25 +7,81 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A60037D265E4982000A06DD /* PersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A60037C265E4982000A06DD /* PersistentContainer.swift */; };
+		4A600380265E4F4D000A06DD /* Questionnaire+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A60037E265E4F4D000A06DD /* Questionnaire+CoreDataClass.swift */; };
+		4A600381265E4F4D000A06DD /* Questionnaire+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A60037F265E4F4D000A06DD /* Questionnaire+CoreDataProperties.swift */; };
 		4A762C8A265A5A4500283634 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A762C89265A5A4500283634 /* AppDelegate.swift */; };
 		4A762C8C265A5A4500283634 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A762C8B265A5A4500283634 /* SceneDelegate.swift */; };
-		4A762C8E265A5A4500283634 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A762C8D265A5A4500283634 /* ViewController.swift */; };
-		4A762C91265A5A4500283634 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A762C8F265A5A4500283634 /* Main.storyboard */; };
 		4A762C94265A5A4500283634 /* clog.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4A762C92265A5A4500283634 /* clog.xcdatamodeld */; };
 		4A762C96265A5A4800283634 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A762C95265A5A4800283634 /* Assets.xcassets */; };
 		4A762C99265A5A4800283634 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A762C97265A5A4800283634 /* LaunchScreen.storyboard */; };
+		4A762CA2265A62FF00283634 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A762CA1265A62FF00283634 /* OnboardingPageViewController.swift */; };
+		4A762CA5265A661900283634 /* OnboardingContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A762CA4265A661900283634 /* OnboardingContentViewController.swift */; };
+		4A762CA8265A667000283634 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A762CA7265A667000283634 /* OnboardingViewController.swift */; };
+		4A762CBB265A93F600283634 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A762CBA265A93F600283634 /* StartViewController.swift */; };
+		4A762CBE265A943E00283634 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A762CBD265A943E00283634 /* HomeViewController.swift */; };
+		4A762CC5265A9D9D00283634 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A762CC4265A9D9D00283634 /* Home.storyboard */; };
+		4A762CDA265A9FE600283634 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A762CD9265A9FE600283634 /* Survey.swift */; };
+		4A762D1F265AD5E100283634 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A762D1E265AD5E100283634 /* Main.storyboard */; };
+		4A762D22265AFEC900283634 /* Montserrat-Bold-700.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A762D20265AFEC900283634 /* Montserrat-Bold-700.ttf */; };
+		4A762D23265AFEC900283634 /* Montserrat-Regular-400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A762D21265AFEC900283634 /* Montserrat-Regular-400.ttf */; };
+		4A762D29265BA0DE00283634 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A762D28265BA0DE00283634 /* UIColor.swift */; };
+		4A762D2B265BA1E600283634 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A762D2A265BA1E600283634 /* UIFont.swift */; };
+		4A762D2D265BB90500283634 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A762D2C265BB90500283634 /* HealthKit.framework */; };
+		4A762D30265BBA3600283634 /* HealthKitSetupAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A762D2F265BBA3600283634 /* HealthKitSetupAssistant.swift */; };
+		4A762D33265BC88C00283634 /* TImeQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A762D32265BC88C00283634 /* TImeQuestionViewController.swift */; };
+		4A762D35265BE01900283634 /* QuizPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A762D34265BE01900283634 /* QuizPageViewController.swift */; };
+		4A762D37265BE04600283634 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A762D36265BE04600283634 /* QuizViewController.swift */; };
+		4A762D3A265C2AA800283634 /* BoolQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A762D39265C2AA800283634 /* BoolQuestionViewController.swift */; };
+		4A762D3C265C2ACA00283634 /* ScaleQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A762D3B265C2ACA00283634 /* ScaleQuestionViewController.swift */; };
+		4A762D3E265C2CC700283634 /* QuizContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A762D3D265C2CC700283634 /* QuizContentViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4A762CD8265A9ED600283634 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		4A60037C265E4982000A06DD /* PersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentContainer.swift; sourceTree = "<group>"; };
+		4A60037E265E4F4D000A06DD /* Questionnaire+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Questionnaire+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4A60037F265E4F4D000A06DD /* Questionnaire+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Questionnaire+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4A762C86265A5A4500283634 /* clog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = clog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A762C89265A5A4500283634 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A762C8B265A5A4500283634 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4A762C8D265A5A4500283634 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4A762C90265A5A4500283634 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4A762C93265A5A4500283634 /* clog.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = clog.xcdatamodel; sourceTree = "<group>"; };
 		4A762C95265A5A4800283634 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A762C98265A5A4800283634 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A762C9A265A5A4800283634 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A762CA1265A62FF00283634 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
+		4A762CA4265A661900283634 /* OnboardingContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentViewController.swift; sourceTree = "<group>"; };
+		4A762CA7265A667000283634 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		4A762CBA265A93F600283634 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		4A762CBD265A943E00283634 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4A762CC4265A9D9D00283634 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		4A762CD9265A9FE600283634 /* Survey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
+		4A762D1E265AD5E100283634 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4A762D20265AFEC900283634 /* Montserrat-Bold-700.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold-700.ttf"; sourceTree = "<group>"; };
+		4A762D21265AFEC900283634 /* Montserrat-Regular-400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular-400.ttf"; sourceTree = "<group>"; };
+		4A762D28265BA0DE00283634 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		4A762D2A265BA1E600283634 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		4A762D2C265BB90500283634 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		4A762D2F265BBA3600283634 /* HealthKitSetupAssistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitSetupAssistant.swift; sourceTree = "<group>"; };
+		4A762D32265BC88C00283634 /* TImeQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TImeQuestionViewController.swift; sourceTree = "<group>"; };
+		4A762D34265BE01900283634 /* QuizPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPageViewController.swift; sourceTree = "<group>"; };
+		4A762D36265BE04600283634 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		4A762D39265C2AA800283634 /* BoolQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolQuestionViewController.swift; sourceTree = "<group>"; };
+		4A762D3B265C2ACA00283634 /* ScaleQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleQuestionViewController.swift; sourceTree = "<group>"; };
+		4A762D3D265C2CC700283634 /* QuizContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizContentViewController.swift; sourceTree = "<group>"; };
+		4A762D3F265CFD4D00283634 /* clog.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = clog.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A762D2D265BB90500283634 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,8 +99,13 @@
 		4A762C7D265A5A4500283634 = {
 			isa = PBXGroup;
 			children = (
+				4A60037E265E4F4D000A06DD /* Questionnaire+CoreDataClass.swift */,
+				4A60037F265E4F4D000A06DD /* Questionnaire+CoreDataProperties.swift */,
+				4A762D27265BA0CB00283634 /* helpers */,
+				4A762D24265AFF0500283634 /* fonts */,
 				4A762C88265A5A4500283634 /* clog */,
 				4A762C87265A5A4500283634 /* Products */,
+				4A762CD5265A9ED600283634 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,16 +120,73 @@
 		4A762C88265A5A4500283634 /* clog */ = {
 			isa = PBXGroup;
 			children = (
+				4A762D3F265CFD4D00283634 /* clog.entitlements */,
 				4A762C89265A5A4500283634 /* AppDelegate.swift */,
+				4A762D2F265BBA3600283634 /* HealthKitSetupAssistant.swift */,
 				4A762C8B265A5A4500283634 /* SceneDelegate.swift */,
-				4A762C8D265A5A4500283634 /* ViewController.swift */,
-				4A762C8F265A5A4500283634 /* Main.storyboard */,
+				4A762CBA265A93F600283634 /* StartViewController.swift */,
+				4A762D2E265BBA0700283634 /* Onboarding */,
+				4A762CBD265A943E00283634 /* HomeViewController.swift */,
+				4A762CD9265A9FE600283634 /* Survey.swift */,
 				4A762C95265A5A4800283634 /* Assets.xcassets */,
 				4A762C97265A5A4800283634 /* LaunchScreen.storyboard */,
+				4A762D1E265AD5E100283634 /* Main.storyboard */,
+				4A762CC4265A9D9D00283634 /* Home.storyboard */,
 				4A762C9A265A5A4800283634 /* Info.plist */,
 				4A762C92265A5A4500283634 /* clog.xcdatamodeld */,
+				4A762D38265BE06800283634 /* Quiz */,
 			);
 			path = clog;
+			sourceTree = "<group>";
+		};
+		4A762CD5265A9ED600283634 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A762D2C265BB90500283634 /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4A762D24265AFF0500283634 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4A762D21265AFEC900283634 /* Montserrat-Regular-400.ttf */,
+				4A762D20265AFEC900283634 /* Montserrat-Bold-700.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		4A762D27265BA0CB00283634 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4A762D28265BA0DE00283634 /* UIColor.swift */,
+				4A60037C265E4982000A06DD /* PersistentContainer.swift */,
+				4A762D2A265BA1E600283634 /* UIFont.swift */,
+			);
+			path = helpers;
+			sourceTree = "<group>";
+		};
+		4A762D2E265BBA0700283634 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				4A762CA7265A667000283634 /* OnboardingViewController.swift */,
+				4A762CA1265A62FF00283634 /* OnboardingPageViewController.swift */,
+				4A762CA4265A661900283634 /* OnboardingContentViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		4A762D38265BE06800283634 /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				4A762D36265BE04600283634 /* QuizViewController.swift */,
+				4A762D3B265C2ACA00283634 /* ScaleQuestionViewController.swift */,
+				4A762D39265C2AA800283634 /* BoolQuestionViewController.swift */,
+				4A762D34265BE01900283634 /* QuizPageViewController.swift */,
+				4A762D3D265C2CC700283634 /* QuizContentViewController.swift */,
+				4A762D32265BC88C00283634 /* TImeQuestionViewController.swift */,
+			);
+			path = Quiz;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,6 +199,7 @@
 				4A762C82265A5A4500283634 /* Sources */,
 				4A762C83265A5A4500283634 /* Frameworks */,
 				4A762C84265A5A4500283634 /* Resources */,
+				4A762CD8265A9ED600283634 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,9 +247,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A762D1F265AD5E100283634 /* Main.storyboard in Resources */,
 				4A762C99265A5A4800283634 /* LaunchScreen.storyboard in Resources */,
+				4A762D22265AFEC900283634 /* Montserrat-Bold-700.ttf in Resources */,
+				4A762D23265AFEC900283634 /* Montserrat-Regular-400.ttf in Resources */,
 				4A762C96265A5A4800283634 /* Assets.xcassets in Resources */,
-				4A762C91265A5A4500283634 /* Main.storyboard in Resources */,
+				4A762CC5265A9D9D00283634 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,24 +263,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A762C8E265A5A4500283634 /* ViewController.swift in Sources */,
+				4A762CDA265A9FE600283634 /* Survey.swift in Sources */,
+				4A762CA5265A661900283634 /* OnboardingContentViewController.swift in Sources */,
+				4A762CBB265A93F600283634 /* StartViewController.swift in Sources */,
+				4A60037D265E4982000A06DD /* PersistentContainer.swift in Sources */,
 				4A762C8A265A5A4500283634 /* AppDelegate.swift in Sources */,
+				4A762D33265BC88C00283634 /* TImeQuestionViewController.swift in Sources */,
+				4A762CBE265A943E00283634 /* HomeViewController.swift in Sources */,
+				4A762D37265BE04600283634 /* QuizViewController.swift in Sources */,
+				4A762D35265BE01900283634 /* QuizPageViewController.swift in Sources */,
+				4A762CA2265A62FF00283634 /* OnboardingPageViewController.swift in Sources */,
+				4A762D2B265BA1E600283634 /* UIFont.swift in Sources */,
+				4A600381265E4F4D000A06DD /* Questionnaire+CoreDataProperties.swift in Sources */,
+				4A762D3C265C2ACA00283634 /* ScaleQuestionViewController.swift in Sources */,
+				4A762CA8265A667000283634 /* OnboardingViewController.swift in Sources */,
+				4A600380265E4F4D000A06DD /* Questionnaire+CoreDataClass.swift in Sources */,
 				4A762C94265A5A4500283634 /* clog.xcdatamodeld in Sources */,
+				4A762D3A265C2AA800283634 /* BoolQuestionViewController.swift in Sources */,
+				4A762D30265BBA3600283634 /* HealthKitSetupAssistant.swift in Sources */,
 				4A762C8C265A5A4500283634 /* SceneDelegate.swift in Sources */,
+				4A762D29265BA0DE00283634 /* UIColor.swift in Sources */,
+				4A762D3E265C2CC700283634 /* QuizContentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4A762C8F265A5A4500283634 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4A762C90265A5A4500283634 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4A762C97265A5A4800283634 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -290,6 +422,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = clog/clog.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BRJCNA7ZH7;
 				INFOPLIST_FILE = clog/Info.plist;
@@ -297,7 +430,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.clog;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thesis.clog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -309,6 +442,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = clog/clog.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BRJCNA7ZH7;
 				INFOPLIST_FILE = clog/Info.plist;
@@ -316,7 +450,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.clog;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thesis.clog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

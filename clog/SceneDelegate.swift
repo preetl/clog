@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  clog
-//
-//  Created by Preet Lalli on 23/05/2021.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
