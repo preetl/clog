@@ -115,7 +115,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //    }()
     
     lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "clog")
+        let container = NSPersistentContainer(name: "myDataModel")
         container.loadPersistentStores { description, error in
             if let error = error {
                 fatalError("Unable to load persistent stores: \(error)")
@@ -147,5 +147,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        print("BACKGROUND")
 //    }
 
+}
+
+extension AppDelegate: UNUserNotificationCenterDelegate{
+    
+  // This function will be called right after user tap on the notification
+  func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+      
+    let storyboard = UIStoryboard(name: "Home", bundle: nil)
+
+    // instantiate the view controller from storyboard
+    if  let surveyVC = storyboard.instantiateViewController(withIdentifier: "surveyHomeVC") as? HomeViewController {
+
+        // set the view controller as root
+        self.window?.rootViewController = surveyVC
+    }
+    // tell the app that we have finished processing the user’s action / response
+    completionHandler()
+  }
 }
 

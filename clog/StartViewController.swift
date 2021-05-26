@@ -11,22 +11,23 @@ class StartViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
-//        if !UserDefaults.standard.bool(forKey: "SEEN-ONBOARDING") {
+        if !UserDefaults.standard.bool(forKey: "SEEN-ONBOARDING") {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        container = appDelegate.persistentContainer
         
         guard container != nil else {
             fatalError("This view needs a persistent container.")
         }
-        UserDefaults.standard.set(true, forKey: "SEEN-ONBOARDING")
         print("toOnboarding")
         let nextVC = self.storyboard!.instantiateViewController(withIdentifier: "onboardingVC")
         nextVC.modalPresentationStyle = .fullScreen
         show(nextVC, sender: self)
-//        } else {
-//            print("toHome")
-//            let homeStoryboard = UIStoryboard(name: "Home", bundle: nil)
-//            let nextVC = homeStoryboard.instantiateViewController(withIdentifier: "tabVC")
-//            nextVC.modalPresentationStyle = .fullScreen
-//            show(nextVC, sender: self)
-//        }
+        } else {
+            print("toHome")
+            let homeStoryboard = UIStoryboard(name: "Home", bundle: nil)
+            let nextVC = homeStoryboard.instantiateViewController(withIdentifier: "tabVC")
+            nextVC.modalPresentationStyle = .fullScreen
+            show(nextVC, sender: self)
+        }
     }
 }

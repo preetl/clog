@@ -18,13 +18,13 @@ class QuizPageViewController: UIPageViewController {
     var views: [QuizContentViewController] = []
     
     var questions: [Question] = [
-        Question(question: "How long did you sleep last night?", id: "sleep", type: "time"),
-        Question(question: "How long did you use your phone in bed last night?", id: "phoneBed", type: "time"),
-        Question(question: "How would you rate last night's sleep?", id: "sleepQuality", type: "scale"),
-        Question(question: "Have you felt down or hopeless today?", id: "down", type: "bool"),
-        Question(question: "Have you felt little interest or pleasure in doing things today?", id: "interest", type: "bool"),
-        Question(question: "Have you felt unable to stop or control worrying today?", id: "worry", type: "bool"),
-        Question(question: "Have you felt nervous, anxious or on edge today?", id: "anxiety", type: "bool")]
+        Question(question: "how long did you sleep last night?", id: "sleep", type: "time"),
+        Question(question: "how long did you use your phone in bed last night?", id: "phoneBed", type: "time"),
+        Question(question: "how would you rate last night's sleep?", id: "sleepQuality", type: "scale"),
+        Question(question: "have you felt down or hopeless today?", id: "down", type: "bool"),
+        Question(question: "have you felt little interest or pleasure in doing things today?", id: "interest", type: "bool"),
+        Question(question: "have you felt unable to stop or control worrying today?", id: "worry", type: "bool"),
+        Question(question: "have you felt nervous, anxious or on edge today?", id: "anxiety", type: "bool")]
     
     var currentIndex = 0
 

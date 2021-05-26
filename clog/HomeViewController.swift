@@ -3,7 +3,7 @@ import CoreData
 
 class HomeViewController: UIViewController {
     
-    var container: PersistentContainer!
+    var container: NSPersistentContainer!
     
     var people: [NSManagedObject] = []
     
@@ -36,22 +36,22 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        container = appDelegate.container
+        container = appDelegate.persistentContainer
         
         var text = ""
         var subtext = ""
         surveyButton.layer.cornerRadius = 10
         
-        let surveyResults = fetchRecordsForEntity("Questionnaire")
+        let surveyResults = fetchRecordsForEntity("Survey")
         let dateCompleted = surveyResults.last?.value(forKey: "date")
         
         if surveyResults.count > 0 && Calendar.current.isDateInToday(dateCompleted as! Date){
             text = "WOOHOO!!"
-            subtext = "You've already completed the questionnaire today! Thank you! Check here tomorrow."
+            subtext = "you've already completed the questionnaire today! Thank you! Check here tomorrow."
             surveyButton.isHidden = true
         }else{
-            text = "Please complete the questionnaire this evening!"
-            subtext = "There are 7 questions and it shouldn't take more than 2 minutes to complete."
+            text = "please complete the questionnaire this evening!"
+            subtext = "there are 7 questions and it shouldn't take more than 2 minutes to complete"
             surveyButton.isHidden = false
         }
                 
@@ -60,7 +60,6 @@ class HomeViewController: UIViewController {
         attributedText.append(NSAttributedString(string: "\n\n\(subtext)", attributes: [NSAttributedString.Key.font: UIFont.appRegularFontWith(size: 14), NSAttributedString.Key.foregroundColor: UIColor.ClogColors.MetalBlue]))
         
         labelTitle.attributedText = attributedText
-        labelTitle.textAlignment = .center
 
     }
     

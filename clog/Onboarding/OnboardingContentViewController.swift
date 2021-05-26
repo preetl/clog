@@ -19,13 +19,13 @@ class OnboardingContentViewController: UIViewController {
         super.viewDidLoad()
         setupTextLabel()
         contentImageView.image = image
-        view.backgroundColor = UIColor.ClogColors.WarmBeige
+        //view.backgroundColor = UIColor.ClogColors.WarmBeige
     }
     
     func setupTextLabel() {
         let attributedText = NSMutableAttributedString(string: heading, attributes: [NSAttributedString.Key.font : UIFont.appBoldFontWith(size: 36), NSAttributedString.Key.foregroundColor: UIColor.ClogColors.MetalBlue])
 
-        attributedText.append(NSAttributedString(string: "\n\n\(subHeading)", attributes: [NSAttributedString.Key.font: UIFont.appRegularFontWith(size: 14), NSAttributedString.Key.foregroundColor: UIColor.ClogColors.MetalBlue]))
+        attributedText.append(NSAttributedString(string: "\n\n\(subHeading)", attributes: [NSAttributedString.Key.font: UIFont.appRegularFontWith(size: 17), NSAttributedString.Key.foregroundColor: UIColor.ClogColors.MetalBlue]))
 
         titleLabel.attributedText = attributedText
         titleLabel.textAlignment = .center

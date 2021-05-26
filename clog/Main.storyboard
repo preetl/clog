@@ -79,7 +79,7 @@
                                 </state>
                                 <connections>
                                     <action selector="nextButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Plj-ph-Ku5"/>
-                                    <segue destination="0Tq-mD-1JQ" kind="presentation" modalPresentationStyle="fullScreen" id="p5J-wN-BlA"/>
+                                    <segue destination="1jk-8k-1uM" kind="presentation" identifier="toSetNotification" modalPresentationStyle="fullScreen" id="DJ5-Sl-ZQp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -130,19 +130,22 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSr-V9-5Ww">
-                                <rect key="frame" x="25" y="360" width="364" height="21"/>
+                                <rect key="frame" x="25" y="360" width="364" height="176"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.97254901959999995" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="z7s-kB-0uV"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.97254901959999995" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="cSr-V9-5Ww" firstAttribute="centerY" secondItem="Lxn-16-4wq" secondAttribute="centerY" id="DXr-oX-2A8"/>
                             <constraint firstItem="dv3-ev-Avo" firstAttribute="top" secondItem="z7s-kB-0uV" secondAttribute="top" constant="71" id="FdR-rL-axS"/>
                             <constraint firstItem="z7s-kB-0uV" firstAttribute="trailing" secondItem="dv3-ev-Avo" secondAttribute="trailing" constant="35" id="FwE-Al-vEj"/>
                             <constraint firstItem="cSr-V9-5Ww" firstAttribute="top" secondItem="dv3-ev-Avo" secondAttribute="bottom" constant="45" id="HSa-tN-Q05"/>
                             <constraint firstItem="z7s-kB-0uV" firstAttribute="trailing" secondItem="cSr-V9-5Ww" secondAttribute="trailing" constant="25" id="b8F-Kz-xld"/>
+                            <constraint firstItem="cSr-V9-5Ww" firstAttribute="centerX" secondItem="Lxn-16-4wq" secondAttribute="centerX" id="kMY-xp-RLU"/>
                             <constraint firstItem="dv3-ev-Avo" firstAttribute="leading" secondItem="z7s-kB-0uV" secondAttribute="leading" constant="35" id="mAL-wV-DBL"/>
                             <constraint firstItem="cSr-V9-5Ww" firstAttribute="leading" secondItem="z7s-kB-0uV" secondAttribute="leading" constant="25" id="yns-5P-86j"/>
                         </constraints>
@@ -155,6 +158,81 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qdp-U0-CSR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="953.62318840579712" y="-256.47321428571428"/>
+        </scene>
+        <!--Set Notification View Controller-->
+        <scene sceneID="p0z-BC-MOR">
+            <objects>
+                <viewController id="1jk-8k-1uM" customClass="SetNotificationViewController" customModule="clog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="92Q-bI-3Ue">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="5" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="cZG-1W-dhO">
+                                <rect key="frame" x="25" y="408" width="364" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="VJI-4Z-74k"/>
+                                </constraints>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7E-Ky-98j">
+                                <rect key="frame" x="25" y="797" width="364" height="35"/>
+                                <color key="backgroundColor" red="0.97950977087020874" green="0.048286817967891693" blue="0.38740694522857666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="qPQ-48-tmF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="14"/>
+                                <state key="normal" title="CONTINUE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButtonTappedWithButton:" destination="1jk-8k-1uM" eventType="touchUpInside" id="bmL-Ke-aAC"/>
+                                    <segue destination="0Tq-mD-1JQ" kind="presentation" identifier="toHome" modalPresentationStyle="fullScreen" id="SEP-Mi-mcY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What time of day would you like to be reminded to complete the daily questionnaire?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MO1-Ba-Y4j">
+                                <rect key="frame" x="25" y="194" width="364" height="117.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="24"/>
+                                <color key="textColor" red="0.039337825030088425" green="0.1623380184173584" blue="0.27445480227470398" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="05S-cq-ZDj"/>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.97254901959999995" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="MO1-Ba-Y4j" secondAttribute="trailing" constant="25" id="6Ja-K4-x2H"/>
+                            <constraint firstItem="cZG-1W-dhO" firstAttribute="leading" secondItem="05S-cq-ZDj" secondAttribute="leading" constant="25" id="QOY-AR-Eum"/>
+                            <constraint firstItem="i7E-Ky-98j" firstAttribute="centerX" secondItem="92Q-bI-3Ue" secondAttribute="centerX" id="RmJ-TL-zEk"/>
+                            <constraint firstItem="cZG-1W-dhO" firstAttribute="top" relation="greaterThanOrEqual" secondItem="MO1-Ba-Y4j" secondAttribute="bottom" constant="5" id="UAt-6b-5Fm"/>
+                            <constraint firstItem="i7E-Ky-98j" firstAttribute="leading" secondItem="05S-cq-ZDj" secondAttribute="leading" constant="25" id="V0I-zk-IAK"/>
+                            <constraint firstItem="MO1-Ba-Y4j" firstAttribute="leading" secondItem="05S-cq-ZDj" secondAttribute="leading" constant="25" id="a84-y6-cT5"/>
+                            <constraint firstItem="05S-cq-ZDj" firstAttribute="trailing" secondItem="i7E-Ky-98j" secondAttribute="trailing" constant="25" id="bBd-dv-UEj"/>
+                            <constraint firstItem="cZG-1W-dhO" firstAttribute="trailing" secondItem="05S-cq-ZDj" secondAttribute="trailing" constant="-25" id="g6Z-eP-0ay"/>
+                            <constraint firstItem="MO1-Ba-Y4j" firstAttribute="top" secondItem="05S-cq-ZDj" secondAttribute="top" constant="150" id="mhe-gk-6vR"/>
+                            <constraint firstItem="05S-cq-ZDj" firstAttribute="bottom" secondItem="i7E-Ky-98j" secondAttribute="bottom" constant="30" id="pfR-cU-rhm"/>
+                            <constraint firstItem="cZG-1W-dhO" firstAttribute="centerY" secondItem="92Q-bI-3Ue" secondAttribute="centerY" constant="35" id="w7x-xk-vX0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="continueButton" destination="i7E-Ky-98j" id="kp7-1O-y8h"/>
+                        <outlet property="timePicker" destination="cZG-1W-dhO" id="aC6-9m-hO7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oZ7-ST-CtP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-610.14492753623188" y="439.95535714285711"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Fiv-Ia-ird">
+            <objects>
+                <viewController id="UQO-pR-1MC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xoo-5C-Jsk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VLj-es-lvw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="770" y="-672"/>
         </scene>
     </scenes>
     <resources>

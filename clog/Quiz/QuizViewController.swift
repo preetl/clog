@@ -3,7 +3,7 @@ import CoreData
 
 class QuizViewController: UIViewController {
     
-    var container: PersistentContainer!
+    var container: NSPersistentContainer!
 
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var nextButton: UIButton!
@@ -27,7 +27,7 @@ class QuizViewController: UIViewController {
         print("Submitted!!!")
 
         let entity =
-            NSEntityDescription.entity(forEntityName: "Questionnaire", in: container.viewContext)!
+            NSEntityDescription.entity(forEntityName: "Survey", in: container.viewContext)!
         let questionnaire = NSManagedObject(entity: entity, insertInto: container.viewContext)
 
         let date = NSDate()
@@ -35,7 +35,7 @@ class QuizViewController: UIViewController {
         questionnaire.setValue(quizPageViewController?.views[0].numResult, forKeyPath: "sleep")
         questionnaire.setValue(quizPageViewController?.views[1].numResult, forKeyPath: "phoneBed")
         questionnaire.setValue(quizPageViewController?.views[2].numResult, forKeyPath: "sleepQuality")
-        questionnaire.setValue(quizPageViewController?.views[3].numResult, forKeyPath: "down")
+        questionnaire.setValue(quizPageViewController?.views[3].boolResult, forKeyPath: "down")
         questionnaire.setValue(quizPageViewController?.views[4].boolResult, forKeyPath: "interest")
         questionnaire.setValue(quizPageViewController?.views[5].boolResult, forKeyPath: "worry")
         questionnaire.setValue(quizPageViewController?.views[6].boolResult, forKeyPath: "anxiety")

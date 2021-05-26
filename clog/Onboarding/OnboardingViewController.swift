@@ -13,11 +13,13 @@ class OnboardingViewController: UIViewController {
         pageControl.pageIndicatorTintColor = UIColor.ClogColors.MetalBlue.withAlphaComponent(0.5)
         pageControl.currentPageIndicatorTintColor = UIColor.ClogColors.MetalBlue
         nextButton.layer.cornerRadius = 10
-        nextButton.isHidden = true
+        nextButton.backgroundColor = UIColor.ClogColors.MetalBlue
+        nextButton.setTitle("SKIP INTRODUCTION", for: .normal)
         // Do any additional setup after loading the view.
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
+        UserDefaults.standard.set(true, forKey: "SEEN-ONBOARDING")
         let center = UNUserNotificationCenter.current()
 
         center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
@@ -27,6 +29,7 @@ class OnboardingViewController: UIViewController {
                 print("D'oh")
             }
         }
+        performSegue(withIdentifier: "toSetNotification", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -47,6 +50,8 @@ extension OnboardingViewController: onboardingPageViewControllerDelegate {
         pageControl.currentPage = index
         if pageControl.currentPage == 3 {
             nextButton.isHidden = false
+            nextButton.setTitle("GET STARTED", for: .normal)
+            nextButton.backgroundColor = UIColor.ClogColors.ActionPink
         }
     }
 }

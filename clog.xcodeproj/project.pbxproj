@@ -8,11 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		4A60037D265E4982000A06DD /* PersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A60037C265E4982000A06DD /* PersistentContainer.swift */; };
-		4A600380265E4F4D000A06DD /* Questionnaire+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A60037E265E4F4D000A06DD /* Questionnaire+CoreDataClass.swift */; };
-		4A600381265E4F4D000A06DD /* Questionnaire+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A60037F265E4F4D000A06DD /* Questionnaire+CoreDataProperties.swift */; };
+		4A600388265E5AFC000A06DD /* Questionnaire+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A600386265E5AFC000A06DD /* Questionnaire+CoreDataClass.swift */; };
+		4A600389265E5AFC000A06DD /* Questionnaire+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A600387265E5AFC000A06DD /* Questionnaire+CoreDataProperties.swift */; };
+		4A60038D265E612D000A06DD /* myDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4A60038B265E612C000A06DD /* myDataModel.xcdatamodeld */; };
+		4A60038F265E7ADC000A06DD /* PrivacyPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A60038E265E7ADC000A06DD /* PrivacyPolicy.swift */; };
+		4A600391265E804B000A06DD /* GeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A600390265E804B000A06DD /* GeneralViewController.swift */; };
+		4A600393265E867D000A06DD /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A600392265E867D000A06DD /* CloudKit.framework */; };
+		4A600396265EA108000A06DD /* SetNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A600395265EA108000A06DD /* SetNotificationViewController.swift */; };
+		4A600398265EA3EC000A06DD /* EndQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A600397265EA3EC000A06DD /* EndQuizViewController.swift */; };
 		4A762C8A265A5A4500283634 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A762C89265A5A4500283634 /* AppDelegate.swift */; };
 		4A762C8C265A5A4500283634 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A762C8B265A5A4500283634 /* SceneDelegate.swift */; };
-		4A762C94265A5A4500283634 /* clog.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4A762C92265A5A4500283634 /* clog.xcdatamodeld */; };
 		4A762C96265A5A4800283634 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A762C95265A5A4800283634 /* Assets.xcassets */; };
 		4A762C99265A5A4800283634 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A762C97265A5A4800283634 /* LaunchScreen.storyboard */; };
 		4A762CA2265A62FF00283634 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A762CA1265A62FF00283634 /* OnboardingPageViewController.swift */; };
@@ -37,6 +42,23 @@
 		4A762D3E265C2CC700283634 /* QuizContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A762D3D265C2CC700283634 /* QuizContentViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4A60039E265ECBE4000A06DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A600399265ECBE3000A06DD /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
+			remoteInfo = Charts;
+		};
+		4A6003A0265ECBE4000A06DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A600399265ECBE3000A06DD /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
+			remoteInfo = ChartsTests;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		4A762CD8265A9ED600283634 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -52,12 +74,18 @@
 
 /* Begin PBXFileReference section */
 		4A60037C265E4982000A06DD /* PersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentContainer.swift; sourceTree = "<group>"; };
-		4A60037E265E4F4D000A06DD /* Questionnaire+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Questionnaire+CoreDataClass.swift"; sourceTree = "<group>"; };
-		4A60037F265E4F4D000A06DD /* Questionnaire+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Questionnaire+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4A600386265E5AFC000A06DD /* Questionnaire+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Questionnaire+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		4A600387265E5AFC000A06DD /* Questionnaire+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Questionnaire+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		4A60038C265E612C000A06DD /* myDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = myDataModel.xcdatamodel; sourceTree = "<group>"; };
+		4A60038E265E7ADC000A06DD /* PrivacyPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicy.swift; sourceTree = "<group>"; };
+		4A600390265E804B000A06DD /* GeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralViewController.swift; sourceTree = "<group>"; };
+		4A600392265E867D000A06DD /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		4A600395265EA108000A06DD /* SetNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNotificationViewController.swift; sourceTree = "<group>"; };
+		4A600397265EA3EC000A06DD /* EndQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndQuizViewController.swift; sourceTree = "<group>"; };
+		4A600399265ECBE3000A06DD /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
 		4A762C86265A5A4500283634 /* clog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = clog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A762C89265A5A4500283634 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A762C8B265A5A4500283634 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4A762C93265A5A4500283634 /* clog.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = clog.xcdatamodel; sourceTree = "<group>"; };
 		4A762C95265A5A4800283634 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A762C98265A5A4800283634 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A762C9A265A5A4800283634 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,17 +118,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A762D2D265BB90500283634 /* HealthKit.framework in Frameworks */,
+				4A600393265E867D000A06DD /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A60039A265ECBE3000A06DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4A60039F265ECBE4000A06DD /* Charts.framework */,
+				4A6003A1265ECBE4000A06DD /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		4A762C7D265A5A4500283634 = {
 			isa = PBXGroup;
 			children = (
-				4A60037E265E4F4D000A06DD /* Questionnaire+CoreDataClass.swift */,
-				4A60037F265E4F4D000A06DD /* Questionnaire+CoreDataProperties.swift */,
+				4A600399265ECBE3000A06DD /* Charts.xcodeproj */,
 				4A762D27265BA0CB00283634 /* helpers */,
 				4A762D24265AFF0500283634 /* fonts */,
 				4A762C88265A5A4500283634 /* clog */,
@@ -120,7 +157,11 @@
 		4A762C88265A5A4500283634 /* clog */ = {
 			isa = PBXGroup;
 			children = (
+				4A600386265E5AFC000A06DD /* Questionnaire+CoreDataClass.swift */,
+				4A600387265E5AFC000A06DD /* Questionnaire+CoreDataProperties.swift */,
 				4A762D3F265CFD4D00283634 /* clog.entitlements */,
+				4A60038E265E7ADC000A06DD /* PrivacyPolicy.swift */,
+				4A600390265E804B000A06DD /* GeneralViewController.swift */,
 				4A762C89265A5A4500283634 /* AppDelegate.swift */,
 				4A762D2F265BBA3600283634 /* HealthKitSetupAssistant.swift */,
 				4A762C8B265A5A4500283634 /* SceneDelegate.swift */,
@@ -130,10 +171,10 @@
 				4A762CD9265A9FE600283634 /* Survey.swift */,
 				4A762C95265A5A4800283634 /* Assets.xcassets */,
 				4A762C97265A5A4800283634 /* LaunchScreen.storyboard */,
+				4A60038B265E612C000A06DD /* myDataModel.xcdatamodeld */,
 				4A762D1E265AD5E100283634 /* Main.storyboard */,
 				4A762CC4265A9D9D00283634 /* Home.storyboard */,
 				4A762C9A265A5A4800283634 /* Info.plist */,
-				4A762C92265A5A4500283634 /* clog.xcdatamodeld */,
 				4A762D38265BE06800283634 /* Quiz */,
 			);
 			path = clog;
@@ -142,6 +183,7 @@
 		4A762CD5265A9ED600283634 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4A600392265E867D000A06DD /* CloudKit.framework */,
 				4A762D2C265BB90500283634 /* HealthKit.framework */,
 			);
 			name = Frameworks;
@@ -170,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				4A762CA7265A667000283634 /* OnboardingViewController.swift */,
+				4A600395265EA108000A06DD /* SetNotificationViewController.swift */,
 				4A762CA1265A62FF00283634 /* OnboardingPageViewController.swift */,
 				4A762CA4265A661900283634 /* OnboardingContentViewController.swift */,
 			);
@@ -180,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				4A762D36265BE04600283634 /* QuizViewController.swift */,
+				4A600397265EA3EC000A06DD /* EndQuizViewController.swift */,
 				4A762D3B265C2ACA00283634 /* ScaleQuestionViewController.swift */,
 				4A762D39265C2AA800283634 /* BoolQuestionViewController.swift */,
 				4A762D34265BE01900283634 /* QuizPageViewController.swift */,
@@ -235,12 +279,35 @@
 			mainGroup = 4A762C7D265A5A4500283634;
 			productRefGroup = 4A762C87265A5A4500283634 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4A60039A265ECBE3000A06DD /* Products */;
+					ProjectRef = 4A600399265ECBE3000A06DD /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				4A762C85265A5A4500283634 /* clog */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		4A60039F265ECBE4000A06DD /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 4A60039E265ECBE4000A06DD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4A6003A1265ECBE4000A06DD /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = 4A6003A0265ECBE4000A06DD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4A762C84265A5A4500283634 /* Resources */ = {
@@ -271,19 +338,23 @@
 				4A762D33265BC88C00283634 /* TImeQuestionViewController.swift in Sources */,
 				4A762CBE265A943E00283634 /* HomeViewController.swift in Sources */,
 				4A762D37265BE04600283634 /* QuizViewController.swift in Sources */,
+				4A600396265EA108000A06DD /* SetNotificationViewController.swift in Sources */,
 				4A762D35265BE01900283634 /* QuizPageViewController.swift in Sources */,
 				4A762CA2265A62FF00283634 /* OnboardingPageViewController.swift in Sources */,
+				4A60038F265E7ADC000A06DD /* PrivacyPolicy.swift in Sources */,
 				4A762D2B265BA1E600283634 /* UIFont.swift in Sources */,
-				4A600381265E4F4D000A06DD /* Questionnaire+CoreDataProperties.swift in Sources */,
+				4A600389265E5AFC000A06DD /* Questionnaire+CoreDataProperties.swift in Sources */,
 				4A762D3C265C2ACA00283634 /* ScaleQuestionViewController.swift in Sources */,
 				4A762CA8265A667000283634 /* OnboardingViewController.swift in Sources */,
-				4A600380265E4F4D000A06DD /* Questionnaire+CoreDataClass.swift in Sources */,
-				4A762C94265A5A4500283634 /* clog.xcdatamodeld in Sources */,
+				4A600398265EA3EC000A06DD /* EndQuizViewController.swift in Sources */,
+				4A600388265E5AFC000A06DD /* Questionnaire+CoreDataClass.swift in Sources */,
 				4A762D3A265C2AA800283634 /* BoolQuestionViewController.swift in Sources */,
 				4A762D30265BBA3600283634 /* HealthKitSetupAssistant.swift in Sources */,
 				4A762C8C265A5A4500283634 /* SceneDelegate.swift in Sources */,
+				4A60038D265E612D000A06DD /* myDataModel.xcdatamodeld in Sources */,
 				4A762D29265BA0DE00283634 /* UIColor.swift in Sources */,
 				4A762D3E265C2CC700283634 /* QuizContentViewController.swift in Sources */,
+				4A600391265E804B000A06DD /* GeneralViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,13 +552,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		4A762C92265A5A4500283634 /* clog.xcdatamodeld */ = {
+		4A60038B265E612C000A06DD /* myDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				4A762C93265A5A4500283634 /* clog.xcdatamodel */,
+				4A60038C265E612C000A06DD /* myDataModel.xcdatamodel */,
 			);
-			currentVersion = 4A762C93265A5A4500283634 /* clog.xcdatamodel */;
-			path = clog.xcdatamodeld;
+			currentVersion = 4A60038C265E612C000A06DD /* myDataModel.xcdatamodel */;
+			path = myDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
