@@ -34,6 +34,10 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         container = appDelegate.persistentContainer
@@ -46,12 +50,12 @@ class HomeViewController: UIViewController {
         let dateCompleted = surveyResults.last?.value(forKey: "date")
         
         if surveyResults.count > 0 && Calendar.current.isDateInToday(dateCompleted as! Date){
-            text = "WOOHOO!!"
-            subtext = "you've already completed the questionnaire today! Thank you! Check here tomorrow."
+            text = "woohoo!!!"
+            subtext = "You've already completed the questionnaire today! Thank you! Check here tomorrow."
             surveyButton.isHidden = true
         }else{
             text = "please complete the questionnaire this evening!"
-            subtext = "there are 7 questions and it shouldn't take more than 2 minutes to complete"
+            subtext = "There are 7 questions and it shouldn't take more than 2 minutes to complete"
             surveyButton.isHidden = false
         }
                 
@@ -60,7 +64,6 @@ class HomeViewController: UIViewController {
         attributedText.append(NSAttributedString(string: "\n\n\(subtext)", attributes: [NSAttributedString.Key.font: UIFont.appRegularFontWith(size: 14), NSAttributedString.Key.foregroundColor: UIColor.ClogColors.MetalBlue]))
         
         labelTitle.attributedText = attributedText
-
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

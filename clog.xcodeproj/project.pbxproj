@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A1E2AF0265F80EF0011EC83 /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1E2AEF265F80EF0011EC83 /* ChartsViewController.swift */; };
+		4A1E2AF3265F81CD0011EC83 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A60039F265ECBE4000A06DD /* Charts.framework */; };
+		4A1E2AF4265F81CD0011EC83 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A60039F265ECBE4000A06DD /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4A60037D265E4982000A06DD /* PersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A60037C265E4982000A06DD /* PersistentContainer.swift */; };
 		4A600388265E5AFC000A06DD /* Questionnaire+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A600386265E5AFC000A06DD /* Questionnaire+CoreDataClass.swift */; };
 		4A600389265E5AFC000A06DD /* Questionnaire+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A600387265E5AFC000A06DD /* Questionnaire+CoreDataProperties.swift */; };
@@ -66,6 +69,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				4A1E2AF4265F81CD0011EC83 /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,6 +77,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4A1E2AEF265F80EF0011EC83 /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
 		4A60037C265E4982000A06DD /* PersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentContainer.swift; sourceTree = "<group>"; };
 		4A600386265E5AFC000A06DD /* Questionnaire+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Questionnaire+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		4A600387265E5AFC000A06DD /* Questionnaire+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Questionnaire+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
@@ -117,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A1E2AF3265F81CD0011EC83 /* Charts.framework in Frameworks */,
 				4A762D2D265BB90500283634 /* HealthKit.framework in Frameworks */,
 				4A600393265E867D000A06DD /* CloudKit.framework in Frameworks */,
 			);
@@ -174,6 +180,7 @@
 				4A60038B265E612C000A06DD /* myDataModel.xcdatamodeld */,
 				4A762D1E265AD5E100283634 /* Main.storyboard */,
 				4A762CC4265A9D9D00283634 /* Home.storyboard */,
+				4A1E2AEF265F80EF0011EC83 /* ChartsViewController.swift */,
 				4A762C9A265A5A4800283634 /* Info.plist */,
 				4A762D38265BE06800283634 /* Quiz */,
 			);
@@ -343,6 +350,7 @@
 				4A762CA2265A62FF00283634 /* OnboardingPageViewController.swift in Sources */,
 				4A60038F265E7ADC000A06DD /* PrivacyPolicy.swift in Sources */,
 				4A762D2B265BA1E600283634 /* UIFont.swift in Sources */,
+				4A1E2AF0265F80EF0011EC83 /* ChartsViewController.swift in Sources */,
 				4A600389265E5AFC000A06DD /* Questionnaire+CoreDataProperties.swift in Sources */,
 				4A762D3C265C2ACA00283634 /* ScaleQuestionViewController.swift in Sources */,
 				4A762CA8265A667000283634 /* OnboardingViewController.swift in Sources */,

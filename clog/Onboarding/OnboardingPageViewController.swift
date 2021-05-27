@@ -11,7 +11,7 @@ class OnboardingPageViewController: UIPageViewController {
 
     var pageTitle = ["welcome!", "check-in daily", "easy tracking", "private and secure"]
     var pageImages: [UIImage] = [UIImage(named:"clogfunky")!, UIImage(named:"dailycheckin")!, UIImage(named:"dailycheckin")!, UIImage(named:"privsecure")!]
-    var pageDescriptionText = ["clog. will run in the background to log your mood and activity to help you know yourself better", "help us, help you by completing the daily questionnaire at the end of everyday. we'll send you a notification to remind you", "simply go about your day as normal and check clog. when you want an update", "clog. will only collect data through phone sensors and screen on/off activities and store it locally. your camera and microphone will not be monitored"]
+    var pageDescriptionText = ["clog. will run in the background to log your mood and activity to help you know yourself better", "Help us, help you by completing the daily questionnaire at the end of everyday. We'll send you a notification to remind you", "simply go about your day as normal and check clog. when you want an update", "clog. will only collect data through phone sensors and screen on/off activities and store it locally. Your camera and microphone will not be monitored"]
     var currentIndex = 0
 
     override func viewDidLoad() {

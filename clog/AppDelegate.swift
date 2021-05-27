@@ -149,21 +149,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
-extension AppDelegate: UNUserNotificationCenterDelegate{
-    
-  // This function will be called right after user tap on the notification
-  func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-      
-    let storyboard = UIStoryboard(name: "Home", bundle: nil)
-
-    // instantiate the view controller from storyboard
-    if  let surveyVC = storyboard.instantiateViewController(withIdentifier: "surveyHomeVC") as? HomeViewController {
-
-        // set the view controller as root
-        self.window?.rootViewController = surveyVC
-    }
-    // tell the app that we have finished processing the user’s action / response
-    completionHandler()
-  }
-}
+//extension AppDelegate: UNUserNotificationCenterDelegate{
+//
+//  // This function will be called right after user tap on the notification
+//  func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+//
+//    let storyboard = UIStoryboard(name: "Home", bundle: nil)
+//
+//    // instantiate the view controller from storyboard
+//    if  let surveyVC = storyboard.instantiateViewController(withIdentifier: "surveyHomeVC") as? HomeViewController {
+//
+//        // set the view controller as root
+//        self.window?.rootViewController = surveyVC
+//        window?.makeKeyAndVisible()
+//    }
+//    // tell the app that we have finished processing the user’s action / response
+//    completionHandler()
+//  }
+//}
 

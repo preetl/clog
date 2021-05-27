@@ -550,16 +550,32 @@
         <!--home-->
         <scene sceneID="i3g-Dl-6zT">
             <objects>
-                <viewController storyboardIdentifier="homeVC" id="rPl-sD-Xom" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeVC" id="rPl-sD-Xom" customClass="ChartsViewController" customModule="clog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CMu-7T-DGq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xw2-9i-zi2" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="67" y="100" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ME-54-8cd" customClass="CombinedChartView" customModule="Charts">
+                                <rect key="frame" x="67" y="369" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="tjP-9Q-bhf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="home" image="analytics-icon" landscapeImage="analytics-icon" selectedImage="analytics-icon" id="9ah-6z-6h4">
                         <color key="badgeColor" red="0.039337825030088425" green="0.1623380184173584" blue="0.27445480227470398" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="barChartView" destination="Xw2-9i-zi2" id="pfc-Kp-DhS"/>
+                        <outlet property="combinedChartView" destination="7ME-54-8cd" id="Dep-kI-hUu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CUu-GG-rpe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

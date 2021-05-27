@@ -74,5 +74,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Data will be stored locally and can only be shared manually.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Data is collected to monitor wellbeing and create awareness of habits.</string>
 </dict>
 </plist>
