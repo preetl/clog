@@ -10,9 +10,10 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var surveyButton: UIButton!
     @IBOutlet weak var labelTitle: UILabel!{
         didSet {
-            labelTitle.numberOfLines = 5
+            labelTitle.numberOfLines = 7
         }
     }
+    @IBOutlet weak var icon: UIImageView!
     
     func fetchRecordsForEntity(_ entity: String) -> [NSManagedObject] {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
@@ -48,20 +49,25 @@ class HomeViewController: UIViewController {
         
         let surveyResults = fetchRecordsForEntity("Survey")
         let dateCompleted = surveyResults.last?.value(forKey: "date")
-        
+
         if surveyResults.count > 0 && Calendar.current.isDateInToday(dateCompleted as! Date){
             text = "woohoo!!!"
             subtext = "You've already completed the questionnaire today! Thank you! Check here tomorrow."
+            print(surveyResults)
             surveyButton.isHidden = true
+            icon.image = UIImage(systemName:"checkmark.circle")
+            icon.tintColor = UIColor.ClogColors.ActionPink
         }else{
             text = "please complete the questionnaire this evening!"
-            subtext = "There are 7 questions and it shouldn't take more than 2 minutes to complete"
+            subtext = "There are 7 questions and it shouldn't take more than 2 minutes to complete."
             surveyButton.isHidden = false
+            icon.image = UIImage(systemName:"pencil.and.ellipsis.rectangle")
+            icon.tintColor = UIColor.ClogColors.MetalBlue
         }
                 
         let attributedText = NSMutableAttributedString(string: text, attributes: [NSAttributedString.Key.font : UIFont.appBoldFontWith(size: 24), NSAttributedString.Key.foregroundColor: UIColor.ClogColors.MetalBlue])
         
-        attributedText.append(NSAttributedString(string: "\n\n\(subtext)", attributes: [NSAttributedString.Key.font: UIFont.appRegularFontWith(size: 14), NSAttributedString.Key.foregroundColor: UIColor.ClogColors.MetalBlue]))
+        attributedText.append(NSAttributedString(string: "\n\n\(subtext)", attributes: [NSAttributedString.Key.font: UIFont.appRegularFontWith(size: 17), NSAttributedString.Key.foregroundColor: UIColor.ClogColors.MetalBlue]))
         
         labelTitle.attributedText = attributedText
     }

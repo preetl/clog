@@ -6,15 +6,14 @@ import UserNotifications
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         print("Documents Directory: ", FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last ?? "Not Found!")
         
-//        NotificationCenter.default.addObserver(self, selector: #selector(applicationDidBecomeActive), name: UIApplication.protectedDataDidBecomeAvailableNotification, object: nil)
+        UNUserNotificationCenter.current().delegate = self
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(applicationDidBecomeActive), name: UIApplication.willEnterForegroundNotification, object: nil)
 //        NotificationCenter.default.addObserver(self, selector: #selector(applicationDidEnterBackground), name: UIApplication.protectedDataWillBecomeUnavailableNotification, object: nil)
-        window?.tintColor = UIColor.ClogColors.MetalBlue
         
 //        let surveyResults = fetchRecordsForEntity("Questionnaire")
 //        if surveyResults.count > 0 {
@@ -46,25 +45,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 
         return result
-    }
-    
-    func scheduleNotification() {
-        let center = UNUserNotificationCenter.current()
-
-        let content = UNMutableNotificationContent()
-        content.title = "Please complete the daily questionnaire!"
-        content.body = "It will take just a few moments"
-        content.categoryIdentifier = "alarm"
-        content.userInfo = ["customData": "fizzbuzz"]
-        content.sound = UNNotificationSound.default
-
-        var dateComponents = DateComponents()
-        dateComponents.hour = 10
-        dateComponents.minute = 30
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-
-        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-        center.add(request)
     }
 
     // MARK: UISceneSession Lifecycle
@@ -140,9 +120,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-//    @objc func applicationDidBecomeActive(notification: NSNotification) {
-//        print("ACTIVE")
-//    }
+    @objc private func applicationDidBecomeActive(notification: NSNotification) {
+        print("ACTIVE")
+        let entity =
+            NSEntityDescription.entity(forEntityName: "Activation", in: persistentContainer.viewContext)!
+        let activation = NSManagedObject(entity: entity, insertInto: persistentContainer.viewContext)
+
+        let date = NSDate()
+        activation.setValue(date, forKeyPath: "date")
+        activation.setValue(false, forKeyPath: "push")
+        
+        saveContext()
+        
+    }
 //    @objc func applicationDidEnterBackground(notification: NSNotification) {
 //        print("BACKGROUND")
 //    }
@@ -167,4 +157,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //    completionHandler()
 //  }
 //}
+
+extension AppDelegate: UNUserNotificationCenterDelegate{
+    
+  // This function will be called right after user tap on the notification
+  func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+    
+    print("push notification delegate")
+    
+//        guard var rootViewController = (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController else {
+//            return
+//        }
+//
+//        let storyboard = UIStoryboard(name: "Home", bundle: nil)
+//
+//        // instantiate the view controller from storyboard
+//        if  let surveyVC = storyboard.instantiateViewController(withIdentifier: "surveyHomeVC") as? HomeViewController {
+//            rootViewController = surveyVC
+//            (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.makeKeyAndVisible()
+//        }
+    
+    let entity =
+        NSEntityDescription.entity(forEntityName: "Activation", in: persistentContainer.viewContext)!
+    let activation = NSManagedObject(entity: entity, insertInto: persistentContainer.viewContext)
+
+    let date = NSDate()
+    activation.setValue(date, forKeyPath: "date")
+    activation.setValue(true, forKeyPath: "push")
+    saveContext()
+    // tell the app that we have finished processing the user’s action / response
+    completionHandler()
+  }
+}
 

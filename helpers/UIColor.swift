@@ -18,5 +18,6 @@ extension UIColor {
             static let MetalBlue = UIColor(netHex: 0x0C2A45)
             static let WarmBeige = UIColor(netHex: 0xFAF8F2)
             static let ActionPink = UIColor(netHex: 0xF71965)
+            static let LessBlue = UIColor(netHex: 0x2166A5)
         }
 }

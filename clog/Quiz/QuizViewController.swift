@@ -39,10 +39,22 @@ class QuizViewController: UIViewController {
         questionnaire.setValue(quizPageViewController?.views[4].boolResult, forKeyPath: "interest")
         questionnaire.setValue(quizPageViewController?.views[5].boolResult, forKeyPath: "worry")
         questionnaire.setValue(quizPageViewController?.views[6].boolResult, forKeyPath: "anxiety")
-//        for i in 0..<(quizPageViewController?.views.count)!{
-//            print(quizPageViewController?.views[i].numResult)
-//        }
-//        UserDefaults.standard.set(true, forKey: "SURVEY-COMPLETED")
+        
+        var moodScore = 0
+        for i in 0..<4{
+            let result = (quizPageViewController?.views[i+3].boolResult)! ? 1 : 0
+            moodScore += result
+        }
+        
+        questionnaire.setValue(4-moodScore, forKeyPath: "mood")
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.saveContext()
+
+        for i in 0..<(quizPageViewController?.views.count)!{
+            print(quizPageViewController?.views[i].numResult)
+        }
+        UserDefaults.standard.set(true, forKey: "SURVEY-COMPLETED")
         self.performSegue(withIdentifier: "endQuiz", sender: nil)
     }
     

@@ -19,6 +19,7 @@ class OnboardingContentViewController: UIViewController {
         super.viewDidLoad()
         setupTextLabel()
         contentImageView.image = image
+        contentImageView.tintColor = UIColor.ClogColors.ActionPink
         //view.backgroundColor = UIColor.ClogColors.WarmBeige
     }
     
