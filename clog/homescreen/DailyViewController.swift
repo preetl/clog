@@ -176,7 +176,7 @@ class DailyViewController: UIViewController, UICollectionViewDataSource, UIColle
     func getImage(index: Int)-> UIImage{
         switch index{
             case 0:
-                return UIImage(systemName:moodIcons[Int(mood)])!
+                return UIImage(systemName:moodIcons[Int(mood)]) ?? UIImage(systemName: "sun.max")!
             case 1:
                 return UIImage(named:"walking")!
             case 2:

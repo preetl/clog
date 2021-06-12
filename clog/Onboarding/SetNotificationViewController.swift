@@ -33,6 +33,7 @@ class SetNotificationViewController: UIViewController {
             print("something went wrong")
           }
         }
+        print("notification scheduled")
     }
     
     @IBAction func nextButtonTapped(button: UIButton) {
@@ -43,5 +44,7 @@ class SetNotificationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         continueButton.layer.cornerRadius = 10
+        timePicker.setValue(UIColor.ClogColors.MetalBlue, forKeyPath: "textColor")
+
     }
 }

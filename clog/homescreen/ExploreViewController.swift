@@ -136,7 +136,7 @@ class ExploreViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     @IBAction func compareButtonTapped(button: UIButton) {
         
-        if surveyResults.count <= 2 {
+        if surveyResults.count < 2 {
             
             let text = "sorry :("
             let subtext = "clog. is still collecting data for you to explore. check here the day after tomorrow or after you've completed 2 daily questionnaires."

@@ -19,8 +19,12 @@ class TimeQuestionViewController: QuizContentViewController {
         super.viewDidLoad()
         loadQuestion()
         view.backgroundColor = UIColor.ClogColors.WarmBeige
-        timePicker.datePickerMode = UIDatePicker.Mode.countDownTimer
-        timePicker.minuteInterval = 5
+        let date = Date()
+        let hour = Calendar.current.component(.hour, from: date)
+        let minute = Calendar.current.component(.minute, from: date)
+        numResult = (hour*60 + minute) * 60
+        timePicker.setDate(date as Date, animated: true)
+        timePicker.tintColor = UIColor.ClogColors.MetalBlue
         timePicker.setValue(UIColor.ClogColors.MetalBlue, forKeyPath: "textColor")
     }
     
